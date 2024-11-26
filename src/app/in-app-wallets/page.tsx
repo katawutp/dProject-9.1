@@ -9,8 +9,8 @@ const InAppWalletsPage: React.FC = () => {
     return (
         <div className="py-20">
             <Header 
-                title="In-App Wallets"
-                subtitle="Learn what In-App Wallets are and how to implement them into your app."
+                title="dProject Login / Register"
+                subtitle="Web3 dApp - Decentralized SocialApplication"
             />
             <InAppWalletOptions />
             <Footer />
@@ -20,11 +20,14 @@ const InAppWalletsPage: React.FC = () => {
 
 function InAppWalletOptions() {
     return (
-      <div className="grid gap-4 lg:grid-cols-3 justify-center">
-        <AllOptions />
+      <div className="grid gap-4 lg:grid-cols-2 justify-center">
+        {/* <PhonePassKey /> */}
+        {/* <AllOptions /> */}
+        
+        <Phone />
         <EmailOnly />
-        <SocialOnly />
-        <PhonePassKey />
+        {/* <SocialOnly /> */}
+
       </div>
     );
 }
@@ -88,10 +91,10 @@ function SocialOnly () {
 }
 
 // In-App Wallet options with phone and pass key
-function PhonePassKey () {
+function Phone () {
     return (
         <div className="flex flex-col items-center mb-20 md:mb-20">
-            <p  className="text-zinc-300 text-base mb-4 md:mb-4">Phone + Pass Key</p>
+            <p  className="text-zinc-300 text-base mb-4 md:mb-4">กรอกโทรศัพท์มือถือ</p>
             <ConnectButton  
                 client={client}
                 wallets={[ 
@@ -99,7 +102,7 @@ function PhonePassKey () {
                         auth: {
                             options: [
                                 "phone",
-                                "passkey"
+                                // "passkey",
                             ]
                         }
                     }) 
