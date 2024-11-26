@@ -20,12 +20,11 @@ const InAppWalletsPage: React.FC = () => {
 
 function InAppWalletOptions() {
     return (
-      <div className="grid gap-4 lg:grid-cols-2 justify-center">
+      <div className="grid gap-4 lg:grid-cols-1 justify-center">
         {/* <PhonePassKey /> */}
         {/* <AllOptions /> */}
         
         <Phone />
-        <EmailOnly />
         {/* <SocialOnly /> */}
 
       </div>
